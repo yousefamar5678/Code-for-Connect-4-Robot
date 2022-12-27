@@ -1,0 +1,31 @@
+Flash md5: 6dd9fbd58937adf07d97b0ac62d61ab6
+MD5 of 0xFF is 1c60bacd72fc681e46b025ce9fb7213e
+
+
+
+python -m esptool --chip esp32 --port COM8 --baud 115200 --no-stub write_flash -z 0x1000 esp32-idf4-20191220-v1.12.bin  
+
+// --no-stub
+
+
+python -m esptool --chip esp32 --port COM8 --baud 115200 write_flash -z 0x1000 esp32-idf4-20191220-v1.12.bin
+
+// --baud 115200
+
+python -m esptool --chip esp32 --port COM8 write_flash -z 0x1000 esp32-idf4-20191220-v1.12.bin
+
+// esp burn firmware
+
+python -m esptool --chip esp32 erase_flash
+
+// erase_flash
+
+ esptool.py write_flash_status --bytes 2 --non-volatile 0
+
+// Delete safe bits in flash to allow installing firmware
+
+
+
+
+
+ python -m esptool --chip esp32 --port COM8 write_flash -z 0x1000 esp32-idf4-20191220-v1.12.bin
