@@ -27,5 +27,5 @@ python -m esptool --chip esp32 erase_flash
 
 
 
-
- python -m esptool --chip esp32 --port COM8 write_flash -z 0x1000 esp32-idf4-20191220-v1.12.bin
+//connect 4 algorithm by Pascal Pons
+ http://blog.gamesolver.org/
